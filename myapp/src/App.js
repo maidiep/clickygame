@@ -19,7 +19,7 @@ class App extends Component {
     this.setState({cards: shuffledArray});
     // if click on an image already clicked, set this.state.score = 0; empty clickeadArray
     if (this.state.clickedArray.includes(id)) {
-      this.setState({ score: 0, clickedArray: [], message: "You clicked that already. Play again.", shakeit: "true"});
+      this.setState({ score: 0, clickedArray: [], message: "You clicked that image already. Play again.", shakeit: "true"});
     }
     else {
       this.setState({
@@ -30,11 +30,11 @@ class App extends Component {
       });
     }
     // set topscore = score if score>topscore.
-    if (this.state.score > this.state.topScore) {
+    if (this.state.score >= this.state.topScore) {
       this.setState({ topScore: this.state.score });
     }
     //win if score is equal to 12
-    if(this.state.score == 12){
+    if(this.state.score === 12){
       this.setState({message:"You win!"});
     }
 
@@ -51,12 +51,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Clicky Game Built with React</h1>
-        </header>
-        <h3 className="App-intro">
-          <strong>Click on an image to earn points but you can't click the same one more than once.</strong> 
-          <p className = "score"><strong>Score: {this.state.score} | TopScore: {this.state.topScore}</strong></p>
+          <h3 className="App-intro">
+          <strong>Click on an image to earn points but you can't click the same image more than once.</strong> 
+          <p className = "score"><strong>Score: {this.state.score} | HighScore: {this.state.topScore}</strong></p>
           <p className="message"><strong>{this.state.message}</strong></p>
         </h3>
+        </header> 
+        <br/>
         <Wrapper
         shakeWrapper = {this.state.shakeit}
         pictures=

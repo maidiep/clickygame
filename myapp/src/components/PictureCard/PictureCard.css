@@ -5,15 +5,14 @@
   margin: 1rem;
   position: relative;
   width: 150px;
-  box-shadow: 0, 3px, 6px, #999, 0 3px 6px #999;
-  text-align: left;
+  box-shadow: 0, 3px, 6px, black, 0 3px 6px, black;
 }
 
 .card > .img-container {
   height: 100%;
   overflow: hidden;
   text-align: center;
-  background: blue;
+  background:teal;
 }
 
 .card > .img-container > img {
@@ -23,10 +22,10 @@
 }
 
 .img-thumbnail:hover {
-  background-color: red;
-  opacity: 0.5;
+  background-color:grey;
+  opacity: 1;
 }
 
 .img-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
