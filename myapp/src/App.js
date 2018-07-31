@@ -33,7 +33,11 @@ class App extends Component {
     if (this.state.score > this.state.topScore) {
       this.setState({ topScore: this.state.score });
     }
-    // shake the wrapper if shakeit is set to true
+    //win if score is equal to 12
+    if(this.state.score == 12){
+      this.setState({message:"You win!"});
+    }
+
   }
   shuffleArray = (picturesArray) => {
       for (let i = picturesArray.length - 1; i > 0; i--) {
