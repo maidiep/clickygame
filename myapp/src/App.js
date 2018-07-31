@@ -34,7 +34,7 @@ class App extends Component {
       this.setState({ topScore: this.state.score });
     }
     //win if score is equal to 12
-    if(this.state.score === 12){
+    if(this.state.score === 11){
       this.setState({message:"You win!"});
     }
 
