@@ -52,7 +52,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Clicky Game Built with React</h1>
           <h3 className="App-intro">
-          <strong>Click on a zodiac to earn points but you can't click the same one more than once.</strong> 
+          <strong>Click on a zodiac sign to earn points but don't click the same one more than once.</strong> 
           <p className = "score"><strong>Score: {this.state.score} | HighScore: {this.state.topScore}</strong></p>
           <p className="message"><strong>{this.state.message}</strong></p>
         </h3>
