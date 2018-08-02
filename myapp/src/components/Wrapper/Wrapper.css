@@ -32,6 +32,22 @@
     animation-iteration-count: 5s;
  
 }
+
+.wrapperWin{
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: yellow;
+  height: 100%;
+  width:60%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }

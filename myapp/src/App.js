@@ -11,7 +11,7 @@ class App extends Component {
     topScore: 0,
     score: 0,
     message: "",
-    shakeit: "false"
+    shakeit: false
   };
   clickPicture = id => {
     // randomize cards
@@ -19,14 +19,14 @@ class App extends Component {
     this.setState({cards: shuffledArray});
     // if click on an image already clicked, set this.state.score = 0; empty clickeadArray
     if (this.state.clickedArray.includes(id)) {
-      this.setState({ score: 0, clickedArray: [], message: "You clicked that image already. Play again.", shakeit: "true"});
+      this.setState({ score: 0, clickedArray: [], message: "You clicked that image already. Play again.", shakeit: "wrapperShake"});
     }
     else {
       this.setState({
         clickedArray: this.state.clickedArray.concat([id]),
         score: this.state.score + 1,
         message: "Yay!",
-        shakeit: "false"
+        shakeit: false
       });
     }
     // set topscore = score if score>topscore.
@@ -35,7 +35,10 @@ class App extends Component {
     }
     //win if score is equal to 12
     if(this.state.score === 11){
-      this.setState({message:"You win!"});
+      this.setState({
+        message:"You win!",
+        shakeit: "wrapperWin"
+      });
     }
 
   }
